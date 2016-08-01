@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Yorsh</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- navigation drawer -->
+    <string name="naw_rules">Правила</string>
+    <string name="naw_stats">Статистика</string>
+    <string name="naw_about">Справка</string>
+    <!--  -->
+
+</resources>
