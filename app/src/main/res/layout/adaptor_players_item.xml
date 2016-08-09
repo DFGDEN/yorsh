@@ -3,7 +3,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
 <android.support.v7.widget.CardView
     android:layout_width="match_parent"
@@ -37,6 +37,16 @@
             android:id="@+id/txtName"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dimen_88" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:text="0"
+            android:id="@+id/txtPoint"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
 
 

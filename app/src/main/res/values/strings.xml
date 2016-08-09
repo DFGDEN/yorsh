@@ -12,4 +12,11 @@
     <string name="naw_about">Справка</string>
     <!--  -->
 
+    <!-- namepick dialog -->
+    <string name="namepick_ok">Принять</string>
+    <string name="namepick_cancel">Отмена</string>
+    <string name="namepick_title">Выбор персонажа</string>
+    <string name="namepick_edttxt_hint">Введите имя</string>
+    <!--  -->
+
 </resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- content players avatars -->
+    <string-array name="players_ava">
+        <item>igrok_menu_1</item>
+        <item>igrok_menu_2</item>
+        <item>igrok_menu_3</item>
+        <item>igrok_menu_4</item>
+        <item>igrok_menu_5</item>
+        <item>igrok_menu_6</item>
+        <item>igrok_menu_7</item>
+        <item>igrok_menu_8</item>
+    </string-array>
+    <!--  -->
+
+
+
+
+</resources>
