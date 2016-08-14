@@ -6,11 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yoursh.dfgden.yorsh.R;
-import com.yoursh.dfgden.yorsh.models.Player;
+import com.yoursh.dfgden.yorsh.models.PlayerModel;
 
 import java.util.ArrayList;
 
@@ -19,27 +18,31 @@ import de.hdodenhof.circleimageview.CircleImageView;
 /**
  * Created by dfgden on 8/1/16.
  */
-public class PlayersAdaptor extends BaseRecycleAdapter {
+public class GamePlayersAdapter extends BaseRecycleAdapter {
 
-    private ArrayList<Player> players;
+    private ArrayList<PlayerModel> players;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public PlayersAdaptor(Activity activity) {
+    public GamePlayersAdapter(Activity activity) {
         this.context = activity.getApplicationContext();
         this.layoutInflater = LayoutInflater.from(activity);
         this.players = new ArrayList<>(9);
     }
 
 
-    public void updPlayers(ArrayList<Player> players) {
+    public void updPlayers(ArrayList<PlayerModel> players) {
         this.players.clear();
         this.players.addAll(players);
     }
 
-    public void addPlayer(Player player) {
+    public void addPlayer(PlayerModel player) {
         this.players.add(player);
         notifyItemInserted(players.size()-1);
+    }
+
+    public ArrayList<PlayerModel> getPlayers() {
+        return players;
     }
 
     @Override
@@ -81,8 +84,9 @@ public class PlayersAdaptor extends BaseRecycleAdapter {
     @Override
     public void onBindBasicItemView(RecyclerView.ViewHolder holder, int position) {
         ViewBasicItem viewBasicItem = (ViewBasicItem) holder;
-        Player player = players.get(position);
-        viewBasicItem.imgIcon.setImageResource(player.getIconId());
+        PlayerModel player = players.get(position);
+        viewBasicItem.imgIcon.setImageResource(context.getResources().getIdentifier(player.getIconContentName(),
+                "drawable", context.getPackageName()));
         viewBasicItem.txtName.setText(player.getName());
         viewBasicItem.txtPoint.setText(player.getPoints() + "");
     }

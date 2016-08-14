@@ -21,34 +21,68 @@
         android:layout_marginStart="@dimen/dimen_72"
         android:layout_marginEnd="@dimen/dimen_16"
         android:layout_marginTop="@dimen/dimen_8"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:maxLength="10"
-
             android:id="@+id/edtCreatePlayer"
             android:layout_alignBottom="@+id/imgAvatar"
-            android:layout_toEndOf="@+id/imgAvatar"
-            />
+            android:layout_toEndOf="@+id/imgAvatar" />
+
     </android.support.design.widget.TextInputLayout>
 
 
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilSecretKey"
+        android:layout_marginStart="@dimen/dimen_72"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:id="@+id/edtSecretKey"
+            android:layout_alignBottom="@+id/imgAvatar"
+            android:layout_toEndOf="@+id/imgAvatar" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/namepick_btn_secret_key"
+        android:id="@+id/btnSecretKey"
+        android:layout_below="@+id/imgAvatar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btnSecretKey"
+        android:layout_alignParentStart="true" />
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/layoutChooseMenu"
+        android:layout_alignParentStart="true"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimen_52"
         android:background="@android:color/white"
         android:gravity="right"
         android:orientation="horizontal"
-        android:padding="@dimen/dimen_8"
-        android:layout_below="@+id/tilCreatePlayer"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="@dimen/dimen_8">
+        android:layout_alignParentBottom="true">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/layoutOK"

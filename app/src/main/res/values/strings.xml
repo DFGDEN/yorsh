@@ -8,7 +8,9 @@
 
     <!-- navigation drawer -->
     <string name="naw_rules">Правила</string>
-    <string name="naw_stats">Статистика</string>
+    <string name="naw_game">Игра</string>
+    <string name="naw_players">Игроки</string>
+    <string name="naw_stats">История</string>
     <string name="naw_about">Справка</string>
     <!--  -->
 
@@ -16,7 +18,17 @@
     <string name="namepick_ok">Принять</string>
     <string name="namepick_cancel">Отмена</string>
     <string name="namepick_title">Выбор персонажа</string>
-    <string name="namepick_edttxt_hint">Введите имя</string>
+    <string name="namepick_input_name">Введите имя персонажа</string>
+    <string name="namepick_btn_secret_key">Установить личный ключ</string>
+    <!--  -->
+
+    <!-- secretkey dialog -->
+    <string name="secretkey_title">Введите личный ключ</string>
+    <!--  -->
+
+    <!-- game fragment -->
+    <string name="game_play_game">Начать игру</string>
+    <string name="game_start_game_error_toast">Нужно хотя бы 2 игрока</string>
     <!--  -->
 
 </resources>
