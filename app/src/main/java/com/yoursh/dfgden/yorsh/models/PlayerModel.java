@@ -1,19 +1,23 @@
 package com.yoursh.dfgden.yorsh.models;
 
+import java.io.Serializable;
+
 /**
  * Created by dfgden on 8/1/16.
  */
-public class PlayerModel {
+public class PlayerModel implements Serializable {
 
     private String name;
     private String iconContentName;
+    private String iconContentTurnName;
     private int points;
     private int allPoints;
     private String secretKey;
 
-    public PlayerModel(String name, String iconContentName, int points, int allPoints, String secretKey) {
+    public PlayerModel(String name, String iconContentName, String iconContentTurnName, int points, int allPoints, String secretKey) {
         this.name = name;
         this.iconContentName = iconContentName;
+        this.iconContentTurnName = iconContentTurnName;
         this.points = points;
         this.allPoints = allPoints;
         this.secretKey = secretKey;
@@ -33,6 +37,14 @@ public class PlayerModel {
 
     public void setIconContentName(String iconContentName) {
         this.iconContentName = iconContentName;
+    }
+
+    public String getIconContentTurnName() {
+        return iconContentTurnName;
+    }
+
+    public void setIconContentTurnName(String iconContentTurnName) {
+        this.iconContentTurnName = iconContentTurnName;
     }
 
     public int getPoints() {

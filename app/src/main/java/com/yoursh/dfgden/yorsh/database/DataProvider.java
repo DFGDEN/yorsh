@@ -66,11 +66,13 @@ public class DataProvider {
                     int idPlayerAllPoint = cursor.getColumnIndex(PlayerTable.PLAYER_ALL_POINTS);
                     int idPhotoSecretKey = cursor.getColumnIndex(PlayerTable.PLAYER_SECRET_KEY);
                     int idIconId = cursor.getColumnIndex(PlayerTable.PLAYER_ICON_ID);
+                    int idTurnIconId = cursor.getColumnIndex(PlayerTable.PLAYER_TURN_ICON_ID);
 
                     do {
                         PlayerModel playerModel = new PlayerModel(
                                 cursor.getString(idPlayerName),
                                 cursor.getString(idIconId),
+                                cursor.getString(idTurnIconId),
                                 cursor.getInt(idPlayerCurrentPoint),
                                 cursor.getInt(idPlayerAllPoint),
                                 cursor.getString(idPhotoSecretKey)

@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.yoursh.dfgden.yorsh.R;
+import com.yoursh.dfgden.yorsh.activities.GameActivity;
 import com.yoursh.dfgden.yorsh.adaptors.GamePlayersAdapter;
 import com.yoursh.dfgden.yorsh.dialogs.NamePickDialog;
 import com.yoursh.dfgden.yorsh.models.PlayerModel;
@@ -61,7 +62,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
                 if (gamePlayersAdapter.getPlayers().size() < 2 ){
                     Toast.makeText(getContext(), R.string.game_start_game_error_toast, Toast.LENGTH_SHORT).show();
                 } else  {
-                    Toast.makeText(getContext(), "ПОЕХАЛИ)", Toast.LENGTH_SHORT).show();
+                   getActivity().startActivity(GameActivity.getGameIntent(getContext(),gamePlayersAdapter.getPlayers()));
                 }
 
                 break;

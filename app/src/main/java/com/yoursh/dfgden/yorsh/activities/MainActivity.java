@@ -112,7 +112,8 @@ public class MainActivity extends AppCompatActivity
 
     private void setFirstFragment() {
         if (getSupportFragmentManager().findFragmentByTag("start") == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, GameFragment.getInstance(), "start").addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                    GameFragment.getInstance(), "start").addToBackStack(null).commit();
         }
     }
 

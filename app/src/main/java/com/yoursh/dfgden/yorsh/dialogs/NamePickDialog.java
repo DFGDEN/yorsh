@@ -39,6 +39,7 @@ public class NamePickDialog extends DialogFragment implements  View.OnClickListe
          }
 
     private String[] arrayContentIcons;
+    private String[] arrayContentTurnIcons;
     private NamePickAdapter namePickAdapter;
     private TextInputLayout tilCreatePlayer;
     private String secretKey= "";
@@ -56,6 +57,7 @@ public class NamePickDialog extends DialogFragment implements  View.OnClickListe
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.arrayContentIcons = getActivity().getApplicationContext().getResources().getStringArray(R.array.players_ava);
+        this.arrayContentTurnIcons = getActivity().getApplicationContext().getResources().getStringArray(R.array.players_turn_ava);
         this.namePickAdapter = new NamePickAdapter(getActivity());
         Random random = new Random();
         this.playerNumber = random.nextInt(arrayContentIcons.length) ;
@@ -117,6 +119,7 @@ public class NamePickDialog extends DialogFragment implements  View.OnClickListe
                 PlayerModel playerModel = new PlayerModel(
                         edtCreatePlayer.getText() +"",
                         arrayContentIcons[playerNumber],
+                        arrayContentTurnIcons[playerNumber],
                         0,
                         0,
                         secretKey

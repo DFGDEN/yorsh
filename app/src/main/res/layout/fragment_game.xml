@@ -10,7 +10,7 @@
     android:id="@+id/recycleList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@drawable/fon"
     android:layout_above="@+id/viewStartGame" />
 
 <android.support.design.widget.FloatingActionButton

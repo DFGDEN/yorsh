@@ -18,6 +18,7 @@ public class PlayerTable {
     public static final String PLAYER_NAME = "player_name";
     public static final String PLAYER_CURRENT_POINTS = "player_current_points";
     public static final String PLAYER_ICON_ID = "player_icon_id";
+    public static final String PLAYER_TURN_ICON_ID = "player_turn_icon_id";
     public static final String PLAYER_ALL_POINTS = "player_all_points";
     public static final String PLAYER_SECRET_KEY = "player_secret_points";
 
@@ -28,6 +29,7 @@ public class PlayerTable {
             + "_id integer primary key autoincrement,"
             + PLAYER_CURRENT_POINTS + " integer,"
             + PLAYER_ICON_ID + " text,"
+            + PLAYER_TURN_ICON_ID + " text,"
             + PLAYER_NAME + " text,"
             + PLAYER_ALL_POINTS + " integer,"
             + PLAYER_SECRET_KEY + " text"
@@ -48,6 +50,7 @@ public class PlayerTable {
         ContentValues contentValues = new ContentValues();
         contentValues.put(PLAYER_CURRENT_POINTS,musicContainer.getPoints());
         contentValues.put(PLAYER_ICON_ID,musicContainer.getIconContentName());
+        contentValues.put(PLAYER_TURN_ICON_ID,musicContainer.getIconContentTurnName());
         contentValues.put(PLAYER_NAME, musicContainer.getName());
         contentValues.put(PLAYER_ALL_POINTS, musicContainer.getName());
         contentValues.put(PLAYER_SECRET_KEY, musicContainer.getSecretKey());
